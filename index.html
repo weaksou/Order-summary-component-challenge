@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    :root{
+      --light-purple: hsl(245, 83%, 68%);
+      --desaturated-blue: hsl(224, 23%, 55%);
+      --dark-blue: hsl(223, 47%, 23%);
+      --bright-blue: hsl(245, 75%, 52%);
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    .main-container{
+      width: 100%;
+      height: 100vh;
+      background-color: #e6edff;
+      background-image: url("./images/pattern-background-desktop.svg");
+      background-repeat: no-repeat;
+      background-size:contain;
+      background-size: 100% 60%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+    .order-container{
+      width: clamp(300px, 375px, 375px);
+      background-color: #fff;
+      border-radius: 20px;
+    }
+    .order-container img{
+      pointer-events: none;
+      user-select: none;
+    }
+    .order-container button, a{
+      transition: all 60ms ease-in-out;
+    }
+    .order-container .head-image{
+      background-color:#f5f6f8;
+      width: 100%;
+      height: 180px;
+      overflow: hidden;
+      border-radius: 20px 20px 0 0;
+    }
+    .head-image img{
+      width: 100%;
+      height: 100%;
+    }
+    .order-container .summary{
+      width: 100%;
+      text-align: center;
+      margin: 40px 0 30px 0;
+      color:  var(--desaturated-blue);
+    }
+    .summary-title{
+      color: var(--dark-blue);
+      font-weight: 900;
+      font-size: 24px;
+    }
+    .summary-description{
+      width: 70%;
+      margin: 15px auto;
+    }
+    .description-card{
+      background-color: hsl(225, 100%, 98%);
+      width: 85%;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 15px;
+      box-sizing: border-box;
+      margin: auto;
+
+    }
+    .description-card .card-info{
+      width: 50%;
+      text-align: left;
+      padding-left: 20px;
+    }
+    .description-card .card-info .card-info-title{
+      color: var(--dark-blue);
+      font-weight: 900;
+    }
+    .description-card .card-link{
+      color: var(--bright-blue);
+      font-weight: 600;
+    }
+    .description-card .card-link:active{
+      color: var(--light-purple);
+      text-decoration: none;
+    }
+    .button{
+      cursor: pointer;
+      width: 85%;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      outline: none;
+    }
+    .proceed-button{
+      background-color: var(--bright-blue);
+      color: white;
+      font-weight: 700;
+      font-size: 15px;
+      margin: 22px auto;
+      letter-spacing: 0.2px;
+      box-shadow: 1px 15px 30px -6px hsla(245, 83%, 68%, 0.51);
+    }
+    .proceed-button:active{
+      background-color: var(--light-purple);
+    }
+    .cancel .cancel-link{
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--desaturated-blue);
+      font-size: 15px;
+    }
+    .cancel .cancel-link:active{
+      color: var(--dark-blue);
+    }
+
+    @media screen and (min-width: 900px) {
+      .main-container{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .order-container{
+        width: 350px;
+      }
+      .order-container .summary{
+        margin: 20px 0 20px 0;
+      }
+      .proceed-button{
+        margin: 15px auto;
+
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="main-container">
+    <section class="order-container">
+      <div class="head-image">
+        <img src="./images/illustration-hero.svg" alt="main cover">
+      </div>
+      <div class="summary">
+        <div class="summary-title">
+          Order Summary
+        </div>
+        <div class="summary-description">
+          You can now listen to millions of songs, audiobooks, and podcasts on any 
+          device anywhere you like!
+        </div>
+        <div class="description-card">
+          <img src="./images/icon-music.svg" alt="Music Card Icon">
+          <div class="card-info">
+            <div class="card-info-title">Annual Plan</div>
+            <div>$59.99/year</div>
+          </div>
+          <a href="#" class="card-link">Change</a>
+        </div>
+        <button class="button proceed-button">Proceed to Payment</button>
+        <div class="cancel">
+          <a href="#" class="cancel-link">Cancel Order</a>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">weaksou</a>.
+  </div>
+
+</div>
+</body>
+</html>
